@@ -1,0 +1,107 @@
+// The main.scss file
+
+// Import variables from a module
+@import "scss/variables";
+@import "scss/mixins";
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+
+  .variables, [class^="looping"] {
+    grid-row: span 2;
+  }
+}
+
+.header {
+  text-align: center;
+}
+
+.blog-post,
+h2 {
+  color: $text-color; // Use a variable
+}
+
+.blog-post {
+  // Nested selectors
+  h1 {
+    text-align: center;
+    color: blue;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+// Mixin usage with arguments
+#square {
+  @include shape(50px, 50px, red);
+}
+
+#rect-a {
+  @include shape(100px, 50px, blue);
+}
+
+#rect-b {
+  @include shape(50px, 100px, orange);
+}
+
+#box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  @include border-stroke(medium);
+}
+
+.looping-a {
+  // For loop
+  @for $j from 1 to 6 {
+    // same as from 1 through 5
+    .text-#{$j} {
+      font-size: 15px * $j;
+    }
+  }
+}
+
+// Each loop
+@each $color in blue, black, red {
+  .#{$color}-bg {
+    background-color: $color;
+  }
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+}
+
+.looping-c {
+  // While loop
+  $x: 1;
+  @while $x < 13 {
+    .text-#{$x} {
+      font-size: 15px * $x;
+    }
+    $x: $x + 1;
+  }
+}
+
+h3{
+  text-align: center;
+}
+.info{
+  width: 200px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+// Extend a class
+.info-important {
+  @extend .info;
+  background-color: magenta;
+}

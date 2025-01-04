@@ -1,0 +1,137 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+body h1, body h2, body h3, body h4, body h5, body h6, body p {
+  margin: 0;
+}
+body .variables, body [class^=looping] {
+  grid-row: span 2;
+}
+
+.header {
+  text-align: center;
+}
+
+.blog-post,
+h2 {
+  color: red;
+}
+
+.blog-post h1 {
+  text-align: center;
+  color: blue;
+}
+.blog-post p {
+  font-size: 20px;
+}
+
+#square {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+#rect-a {
+  width: 100px;
+  height: 50px;
+  background-color: blue;
+}
+
+#rect-b {
+  width: 50px;
+  height: 100px;
+  background-color: orange;
+}
+
+#box {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  border: 3px solid black;
+}
+
+.looping-a .text-1 {
+  font-size: 15px;
+}
+.looping-a .text-2 {
+  font-size: 30px;
+}
+.looping-a .text-3 {
+  font-size: 45px;
+}
+.looping-a .text-4 {
+  font-size: 60px;
+}
+.looping-a .text-5 {
+  font-size: 75px;
+}
+
+.blue-bg {
+  background-color: blue;
+}
+
+.black-bg {
+  background-color: black;
+}
+
+.red-bg {
+  background-color: red;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+}
+
+.looping-c .text-1 {
+  font-size: 15px;
+}
+.looping-c .text-2 {
+  font-size: 30px;
+}
+.looping-c .text-3 {
+  font-size: 45px;
+}
+.looping-c .text-4 {
+  font-size: 60px;
+}
+.looping-c .text-5 {
+  font-size: 75px;
+}
+.looping-c .text-6 {
+  font-size: 90px;
+}
+.looping-c .text-7 {
+  font-size: 105px;
+}
+.looping-c .text-8 {
+  font-size: 120px;
+}
+.looping-c .text-9 {
+  font-size: 135px;
+}
+.looping-c .text-10 {
+  font-size: 150px;
+}
+.looping-c .text-11 {
+  font-size: 165px;
+}
+.looping-c .text-12 {
+  font-size: 180px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.info, .info-important {
+  width: 200px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.info-important {
+  background-color: magenta;
+}/*# sourceMappingURL=main.css.map */
